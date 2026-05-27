@@ -31,3 +31,5 @@ dpkg-deb --build --root-owner-group \
 rm -rf "$PKGDIR"
 
 echo "Package created: ${PKGNAME}.deb"
+echo ""
+echo "    sudo apt install ./${PKGNAME}.deb"
