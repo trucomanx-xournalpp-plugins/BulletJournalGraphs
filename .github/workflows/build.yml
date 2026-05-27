@@ -1,0 +1,48 @@
+name: Build DEB
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y dpkg-dev fakeroot
+
+      - name: Build package
+        run: |
+          chmod +x makedeb/makedeb.sh
+          cd makedeb
+          ./makedeb.sh
+
+      - name: Find deb
+        id: find_deb
+        run: |
+          DEB_FILE=$(find makedeb -name "*.deb" | head -n 1)
+          echo "deb_file=$DEB_FILE" >> $GITHUB_OUTPUT
+
+      - name: Upload temporary artifact
+        if: startsWith(github.ref, 'refs/heads/')
+        uses: actions/upload-artifact@v4
+        with:
+          name: deb-package
+          path: ${{ steps.find_deb.outputs.deb_file }}
+          retention-days: 1
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.find_deb.outputs.deb_file }}
