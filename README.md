@@ -18,7 +18,9 @@ To install the plugin, follow any of these methods:
 
 ## Usage
 
-### Arrow bullet `<Ctrl><Alt>a`
-![Arrow bullet](screenshot/screenshot1.png)
+### Arrow Bullet `<Ctrl><Alt>a`
+![Arrow Bullet](screenshot/screenshot1.png)
 
+### Title Round `<Ctrl><Alt>r`
+![Title Round](screenshot/screenshot2.png)
 
