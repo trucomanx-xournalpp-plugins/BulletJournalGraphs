@@ -1,22 +1,22 @@
 # Xournal Plugin BulletJournalGraphs
 
 ## Introduction
-[Xournalpp](https://github.com/xournalpp/xournalpp) plugin to made bullet journal graphics.
+[Xournalpp](https://github.com/xournalpp/xournalpp) plugin to make bullet journal graphics.
 
-  * **BulletJournalGraphs** The directory of plugin.
-  * **makedeb** This directory contain the script to generate `xournalpp-plugin-bulletjournalgraphs.deb` binary file.
+  * **BulletJournalGraphs** The plugin directory.
+  * **makedeb** This directory contains the script to generate the `xournalpp-plugin-bulletjournalgraphs.deb` binary file.
 
 ## Manual Install
 
-To install the plugin follow any of these methods:
+To install the plugin, follow any of these methods:
 
-  * Copy the directory `BulletJournalGraphs` inside the path `/usr/share/xournalpp/plugins/`, or
-  * Create the install `xournalpp-plugin-bulletjournalgraphs.deb` binary file executing the script in `makedeb` directory, following this commands:
+  * Copy the directory `BulletJournalGraphs` into the path `/usr/share/xournalpp/plugins/`, or
+  * Create the `xournalpp-plugin-bulletjournalgraphs.deb` binary file by executing the script in the `makedeb` directory, following these commands:
 
         cd makedeb
         ./makedeb.sh
 
-## Using
+## Usage
 
 ### Arrow bullet `<Ctrl><Alt>a`
 ![Arrow bullet](screenshot/screenshot1.png)
