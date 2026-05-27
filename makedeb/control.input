@@ -3,8 +3,8 @@ Priority: optional
 Section: misc
 Maintainer: Fernando Pujaico Rivera <fernando.pujaico.rivera@gmail.com>
 Architecture: all
-Version: 1.1
-Depends: lua-cjson
+Version: @VERSION@
+Depends: lua-cjson, lua-json
 Description: Xournalpp plugin to add bullet journal graphics
  This Xournalpp plugin add to menu a set of bullet journal graphics
 

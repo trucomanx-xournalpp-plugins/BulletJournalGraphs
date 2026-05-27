@@ -1,42 +1,26 @@
--- This is an example Xournal++ Plugin - copy this to get started
+-- main.lua
+--
+-- Simplified version of BulletJournalGraphs plugin
+-- without external JSON configuration system.
 
 require "ArrowBullet"
 require "TitleRound"
-require "GetInitData"
 
-
--- Register all Toolbar actions and intialize all UI stuff
 function initUi()
-    data={
-        ArrowBullet={
-            menu="Add arrow bullet",
-            accelerator="<Control><Alt>a"
-        },
-        TitleRound={
-            menu="Add round box title",
-            accelerator="<Control><Alt>r"
-        },
-    };
-    
 
-    print("\nRegistering the plugin BulletJournalGraphs ...");
+    print("\nRegistering BulletJournalGraphs plugin...")
 
-    data=GetInitData(data);
+    app.registerUi({
+        menu = "Add arrow bullet",
+        callback = "ArrowBulletCallback",
+        accelerator = "<Control><Alt>a"
+    })
 
-    ref = app.registerUi({  ["menu"] = data["ArrowBullet"]["menu"], 
-                            ["callback"] = "ArrowBulletCallback", 
-                            ["accelerator"] = data["ArrowBullet"]["accelerator"]}
-                        );
+    app.registerUi({
+        menu = "Add round box title",
+        callback = "TitleRoundCallback",
+        accelerator = "<Control><Alt>r"
+    })
 
-    ref = app.registerUi({  ["menu"] = data["TitleRound"]["menu"], 
-                            ["callback"] = "TitleRoundCallback", 
-                            ["accelerator"] = data["TitleRound"]["accelerator"]}
-                        );
-
-    print("The plugin BulletJournalGraphs was registered.\n");
+    print("BulletJournalGraphs plugin registered.\n")
 end
-
-
-
-
-
