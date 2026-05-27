@@ -6,6 +6,12 @@
   * **BulletJournalGraphs** The plugin directory.
   * **makedeb** This directory contains the script to generate the `xournalpp-plugin-bulletjournalgraphs.deb` binary file.
 
+## Download and Install
+
+Go to the [release page](https://github.com/trucomanx-xournalpp-plugins/BulletJournalGraphs/releases) and download the latest VERSION, then run:
+
+    sudo apt install ./xournalpp-plugin-bulletjournalgraphs-{VERSION}.deb
+
 ## Manual Install
 
 To install the plugin, follow any of these methods:
