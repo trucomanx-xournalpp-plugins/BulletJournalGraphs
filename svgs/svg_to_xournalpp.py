@@ -8,11 +8,13 @@ from svgpathtools import svg2paths
 import sys
 import math
 
-if len(sys.argv) < 2:
-    print("Usage: python svg_to_xournalpp.py input.svg")
+if len(sys.argv) < 4:
+    print("Usage: python svg_to_xournalpp.py input.svg luafile.lua DrawGeneratedShape")
     sys.exit(1)
 
-svg_file = sys.argv[1]
+svg_file  = sys.argv[1]
+lua_file  = sys.argv[2]
+func_name = sys.argv[3]
 
 paths, attributes = svg2paths(svg_file)
 
@@ -22,7 +24,7 @@ lua = []
 
 lua.append("-- Auto-generated from SVG")
 lua.append("")
-lua.append("function DrawGeneratedShape(xoff, yoff, scale)")
+lua.append("function "+func_name+"(xoff, yoff, scale)")
 lua.append("")
 lua.append("    local strokes = {}")
 lua.append("")
@@ -67,7 +69,7 @@ for path in paths:
 lua.append("    app.addStrokes({strokes = strokes})")
 lua.append("end")
 
-with open("TitleRoundGenerated.lua", "w") as f:
+with open(lua_file, "w") as f:
     f.write("\n".join(lua))
 
-print("Generated: TitleRoundGenerated.lua")
+print(f"Generated: {lua_file}")
