@@ -22,7 +22,7 @@ To install the plugin, follow any of these methods:
         git clone https://github.com/trucomanx-xournalpp-plugins/BulletJournalGraphs.git
         cd BulletJournalGraphs/makedeb
         ./makedeb.sh
-        sudo apt install ./xournalpp-plugin-bulletjournalgraphs-{VERSION}.deb
+        sudo apt install ./xournalpp-plugin-bulletjournalgraphs-*.deb
 
 ## Usage
 
