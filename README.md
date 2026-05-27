@@ -19,7 +19,8 @@ To install the plugin, follow any of these methods:
   * Copy the directory `BulletJournalGraphs` into the path `/usr/share/xournalpp/plugins/`, or
   * Create the `xournalpp-plugin-bulletjournalgraphs.deb` binary file by executing the script in the `makedeb` directory, following these commands:
 
-        cd makedeb
+        git clone https://github.com/trucomanx-xournalpp-plugins/BulletJournalGraphs.git
+        cd BulletJournalGraphs/makedeb
         ./makedeb.sh
 
 ## Usage
