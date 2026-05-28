@@ -5,6 +5,7 @@
 
 require "ArrowBullet"
 require "TitleRound"
+require "PatternLines1"
 
 function initUi()
 
@@ -20,6 +21,12 @@ function initUi()
         menu = "Add round box title",
         callback = "TitleRoundCallback",
         accelerator = "<Control><Alt>r"
+    })
+
+    app.registerUi({
+        menu = "Add pattern Lines1",
+        callback = "PatternLines1Callback",
+        accelerator = "<Control><Alt>p"
     })
 
     print("BulletJournalGraphs plugin registered.\n")

@@ -24,8 +24,9 @@ lua = []
 
 lua.append("-- Auto-generated from SVG")
 lua.append("")
-lua.append("function "+func_name+"(xoff, yoff, scale)")
+lua.append("function "+func_name+"(xoff, yoff, scale, linewidth)")
 lua.append("")
+lua.append("    linewidth = linewidth or 1")
 lua.append("    local strokes = {}")
 lua.append("")
 
@@ -62,7 +63,7 @@ for path in paths:
         lua.append("            " + ", ".join(points_y))
         lua.append("        },")
 
-        lua.append('        tool = "pen"')
+        lua.append('        tool = "pen", width = linewidth')
         lua.append("    })")
         lua.append("")
 
