@@ -12,7 +12,7 @@ function TitleRoundCallback()
     local x = 0.03 * width
     local y = 0.03 * width
 
-    TitleRoundShape(x, y, scale)
+    TitleRoundShape(x, y, scale, 1)
 
     app.refreshPage()
 end
