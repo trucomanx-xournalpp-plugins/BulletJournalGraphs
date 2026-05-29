@@ -1,6 +1,6 @@
 -- Auto-generated from SVG
 
-function BulletArrowShape(xoff, yoff, scale, linewidth)
+function BulletRibonShape(xoff, yoff, scale, linewidth)
 
     linewidth = linewidth or 1
     local strokes = {}

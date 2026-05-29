@@ -3,9 +3,10 @@
 -- Simplified version of BulletJournalGraphs plugin
 -- without external JSON configuration system.
 
-require "BulletArrow"
+require "BulletRibon"
 require "TitleRound"
 require "PatternLines1"
+require "PatternLines2"
 require "ArrowRight1"
 require "CheckboxOn1"
 require "CheckboxOff1"
@@ -15,8 +16,8 @@ function initUi()
     print("\nRegistering BulletJournalGraphs plugin...")
 
     app.registerUi({
-        menu = "Add [bullet] arrow",
-        callback = "BulletArrowCallback",
+        menu = "Add [bullet] ribon",
+        callback = "BulletRibonCallback",
         accelerator = "<Control><Alt>b"
     })
 
@@ -31,6 +32,12 @@ function initUi()
         callback = "PatternLines1Callback",
         accelerator = "<Control><Alt>p"
     })
+    
+    app.registerUi({
+        menu = "Add [pattern] Lines 2",
+        callback = "PatternLines2Callback"
+    })
+    
     
     app.registerUi({
         menu = "Add [arrow] right 1",

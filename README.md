@@ -26,9 +26,24 @@ To install the plugin, follow any of these methods:
 
 ## Usage
 
-### Bullet Arrow `<Ctrl><Alt>b`
-![Bullet Arrow](screenshot/screenshot1.png)
+### Bullet Ribon `<Ctrl><Alt>b`
+![Bullet Ribon](screenshot/screenshot1.png)
 
 ### Title Round `<Ctrl><Alt>t`
 ![Title Round](screenshot/screenshot2.png)
+
+### Pattern Lines 1 `<Ctrl><Alt>b`
+![Pattern Lines 1](screenshot/screenshot3.png)
+
+### Pattern Lines 2
+![Pattern Lines 2](screenshot/screenshot4.png)
+
+### Arrow Right 1 `<Ctrl><Alt>a`
+![Arrow Right 1](screenshot/screenshot5.png)
+
+### Checkbox On 1 `<Ctrl><Alt>c`
+![Checkbox On 1](screenshot/screenshot6.png)
+
+### Checkbox Off 1
+![Checkbox Off 1](screenshot/screenshot7.png)
 
